@@ -1,0 +1,30 @@
+{
+  "name": "CodeFest2014",
+  "version": "0.0.0-presentation",
+  "homepage": "https://nschonni.github.io/CodeFest2014",
+  "authors": [
+    {
+      "name": "Nick Schonning",
+      "url": "https://github.com/nschonni"
+    }
+  ],
+  "description": "Intro to Sass Presentation for CodeFest 2014",
+  "keywords": [
+    "framework",
+    "web",
+    "html5",
+    "WCAG2.0",
+    "accessiblity",
+    "usability",
+    "interoperability",
+    "mobile",
+    "multilingual",
+    "i18n",
+    "a11y",
+    "wet-boew"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "reveal.js":"2.6.2"
+  }
+}
