@@ -117,6 +117,11 @@ $dont-even: blink;
 			</ul>
 		</aside>
 	</section>
+	<section>
+		<h2>Warning</h2>
+		<img src="./assets/DangerWillRobinson.jpg" alt="Robot from the show Lost in Space, saying 'Danger Will Robinson'">
+		<p>Not all compilers support the features of the Ruby version :(</p>
+	</section>
 </section>
 				<section>
 	<section>
@@ -162,6 +167,18 @@ $color: white;
 		<h2>Naming</h2>
 		<p>Make it easy to figure out which variable a new user should pick</p>
 		<p>See http://thesassway.com/beginner/variable-naming for a good explaination</p>
+	</section>
+	<section>
+		<h2>Interpolation</h2>
+		<p>Lets mix up some strings!</p>
+		<pre><code class="scss">
+$name: foo;
+$attr: border;
+p.#{$name} {
+  #{$attr}-color: blue;
+}
+		</code></pre>
+		<p>Where would this be usefull?</p>
 	</section>
 </section>
 				<section>
@@ -294,6 +311,7 @@ $theme: unquote("awesome");
   </section>
 </section>
 
+				
 				<section>
 	<section>
 		<h2>@mixins</h2>
@@ -333,11 +351,11 @@ $gutter-width: 10px;
 </section>
 
 				<section>
-	<select>
+	<section>
 		<h2>SCSS Lint</h2>
 		<p><a href="https://github.com/causes/scss-lint">https://github.com/causes/scss-lint</a></p>
 		<p>This allows you to create coding guidelines for your team, and warns you when you might be making mistakes</p>
-	</select>
+	</section>
 </section>
 				<section>
 	<h2>Links, Links, Links</h2>
@@ -356,10 +374,10 @@ $gutter-width: 10px;
 		</li>
 		<li>Weekly mailers
 			<ul>
-				<li><a href="http://SassNews.com">SassNews.com</a>: a MailChimp</li>
+				<li><a href="http://SassNews.com">SassNews.com</a>: a MailChimp powered weekly newsletter</li>
 			</ul>
 		</li>
-		<li>Twitters</li>
+		<li>Others you'd like to share?</li>
 	</ul>
 	<aside class="notes">
 		<ul>
