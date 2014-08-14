@@ -1,0 +1,37 @@
+<section>
+	<section>
+		<h2>@mixins</h2>
+		<p>Hey, we're all related right</p>
+		<pre><code class="scss">
+@mixin the-border {
+  border: 1px solid #ccc;
+}
+
+@mixin good-border {
+  @content;
+  border-color: green;
+}
+
+// What happens when I don't pass a value
+@mixin reading-direction($direction: "rtl") {
+  direction: $direction;
+}
+		</code></pre>
+	</section>
+	<section>
+		<h2>@functions</h2>
+		<p>Calculate all the thinks</p>
+		<pre><code class="scss">
+$grid-width: 40px;
+$gutter-width: 10px;
+
+@function grid-width($n) {
+  @return $n * $grid-width + ($n - 1) * $gutter-width;
+}
+
+#sidebar {
+  width: grid-width(5);
+}
+		</code></pre>
+	</section>
+</section>

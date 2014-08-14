@@ -1,0 +1,61 @@
+<section>
+	<section>
+		<h2>@extend yourself</h2>
+    <p>Used when you want extend</p>
+		<pre><code class="scss">
+.message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  @extend .message;
+  border-color: green;
+}
+
+.error {
+  @extend .message;
+  border-color: red;
+}
+
+.warning {
+  @extend .message;
+  border-color: yellow;
+}
+		</code></pre>
+	</section>
+  <section>
+    <h2>%placholder</h2>
+    <p>Used when you want extend, but safer</p>
+    <pre><code class="scss">
+// If nothing extends me, I don't output anything
+
+%width-small {
+    width: 10px;
+}
+    </code></pre>
+  </section>
+  <section>
+    <h2>Demo</h2>
+    <p>Used when you want extend, but safer</p>
+    <pre><code class="scss">
+// If nothing extends me, I don't output anything
+
+%width-small {
+  width: 10px;
+}
+
+.foo {
+  // I want to grow up to be small
+  @extend %width-small;
+}
+
+// OK, now what is output
+.bar {
+  @extend %width-small;
+  background: #ccc;
+}
+    </code></pre>
+  </section>
+</section>

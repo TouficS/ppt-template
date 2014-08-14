@@ -1,0 +1,46 @@
+<section>
+	<section>
+		<h2>$Variables</h2>
+		<ol>
+			<li>Start with a <code>$</code></li>
+			<li>Makes it easier for theming and branding</li>
+		</ol>
+	</section>
+	<section>
+		<h2>Scope</h2>
+		<p>Variables are scoped to the block that calls them</p>
+	</section>
+	<section>
+		<h2>What should this be compiled to?</h2>
+		<pre><code class="scss">
+$color: white;
+
+@mixin colors($color: blue) {
+  background-color: $color;
+  @content;
+  border-color: $color;
+}
+
+.colors {
+  @include colors {
+    color: $color;
+  }
+}
+		</code></pre>
+	</section>
+	<section>
+		<h2>Did you get it right?</h2>
+		<pre><code class="css">
+.colors {
+  background-color: blue;
+  color: white;
+  border-color: blue;
+}
+		</code></pre>
+	</section>
+	<section>
+		<h2>Naming</h2>
+		<p>Make it easy to figure out which variable a new user should pick</p>
+		<p>See http://thesassway.com/beginner/variable-naming for a good explaination</p>
+	</section>
+</section>

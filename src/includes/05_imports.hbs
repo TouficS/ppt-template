@@ -1,0 +1,54 @@
+<section>
+	<section>
+		<h2>@imports</h2>
+		<p>OK, so I have 20 sheets, how do I stitch them together</p>
+	</section>
+	<section>
+		<h2>When to import?</h2>
+		<ul>
+			<li>Your common variables</li>
+			<li>Mixins</li>
+			<li>Your media queries</li>
+		</ul>
+	</section>
+	<section>
+		<h2>Demo</h2>
+		<h3>_branding.scss</h3>
+		<pre><code class="scss">
+$border-colour: red;
+$border-width: 1px;
+		</code></pre>
+		<h3>base.scss</h3>
+		<pre><code class="scss">
+@import "branding";
+
+.uses-partial {
+	color: $border-colour;
+}
+		</code></pre>
+	</section>
+	<section>
+		<h2>But I really like the CSS version of @import</h2>
+		<ul>
+			<li>OK ...</li>
+			<li>Are you sure?</li>
+		</ul>
+	</section>
+	<section>
+		<h2>Keeping your classic @import</h2>
+		<pre><code class="scss">
+@import "foo.css";
+@import "foo" screen;
+@import "http://foo.com/bar";
+@import url(foo);
+		</code></pre>
+	</section>
+	<section>
+		<h2>OK, a valid use case for the old way</h2>
+		<pre><code class="scss">
+$theme: unquote("awesome");
+
+@import url("http://cdn.example.com/css/#{$theme}.css");
+		</code></pre>
+	</section>
+</section>
