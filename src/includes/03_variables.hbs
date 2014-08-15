@@ -43,4 +43,16 @@ $color: white;
 		<p>Make it easy to figure out which variable a new user should pick</p>
 		<p>See http://thesassway.com/beginner/variable-naming for a good explaination</p>
 	</section>
+	<section>
+		<h2>Interpolation</h2>
+		<p>Lets mix up some strings!</p>
+		<pre><code class="scss">
+$name: foo;
+$attr: border;
+p.#{$name} {
+  #{$attr}-color: blue;
+}
+		</code></pre>
+		<p>Where would this be usefull?</p>
+	</section>
 </section>
