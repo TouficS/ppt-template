@@ -1,57 +1,54 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Introduction to Sass</title>
-		<link rel="stylesheet" href="./reveal.js/css/reveal.min.css">
-		<link rel="stylesheet" href="css/styles.min.css">
+<head>
+<meta charset="utf-8">
+<title>Introduction to Sass</title>
+<link rel="stylesheet" href="./reveal.js/css/reveal.min.css">
+<link rel="stylesheet" href="css/styles.min.css">
 
-		<!-- For Highlighting -->
-		<link rel="stylesheet" href="./reveal.js/lib/css/zenburn.css">
-
-	</head>
-	<body>
-		<h1>Template for presentations</h1>
-		<div class="reveal">
-			<div class="slides">
-				<section>
-	<section>
-		<h2 id="intro">this is a demo</h2>
-		<img src="./assets/Sass.png" title="Sass logo" />
-		<p>#Sass, #WxT</p>
-		<p><time datetime="2014-08-14">August 14, 2014</time></p>
-		<aside class="notes">
-			<ul>
-				<li>Nick Schonning. Work at CIC as Programmer</li>
-				<li>From the Federal worker in Toronto, which is almost Siberia.</li>
-			</ul>
-		</aside>
-	</section>
-	
-	<section>
-		<h2 id="toufic">this is a demo page by toufic</h2>
-	
-		<p>a11y</p>
-		<aside class="notes">
-			<ul>
-				<li>Nick Schonning. Work at CIC as Programmer</li>
-				<li>From the Federal worker in Toronto, which is almost Siberia.</li>
-			</ul>
-		</aside>
-	</section>
-	
-	
-	<section>
-		<h2>Flavours</h2>
-		<p></p>
-		<ol>
-			<li>Indentation based (.sass)</li>
-			<li>Nested braces (.scss)</li>
-		</ol>
-	</section>
-	<section>
-		<h2>Code Examples</h2>
-		<pre><code class="profile">//COBUCLG  JOB CLASS=A,MSGCLASS=A,MSGLEVEL=(1,1)
+<!-- For Highlighting -->
+<link rel="stylesheet" href="./reveal.js/lib/css/zenburn.css">
+</head>
+<body>
+<h1>Template for presentations</h1>
+<div class="reveal">
+  <div class="slides">
+    <section>
+      <section>
+        <h2 id="intro">this is a demo</h2>
+        <img src="./assets/Sass.png" title="Sass logo" />
+        <p>#Sass, #WxT</p>
+        <p>
+          <time datetime="2014-08-14">August 14, 2014</time>
+        </p>
+        <aside class="notes">
+          <ul>
+            <li>Nick Schonning. Work at CIC as Programmer</li>
+            <li>From the Federal worker in Toronto, which is almost Siberia.</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h2 id="toufic">this is a demo page by toufic</h2>
+        <p>a11y</p>
+        <aside class="notes">
+          <ul>
+            <li>Nick Schonning. Work at CIC as Programmer</li>
+            <li>From the Federal worker in Toronto, which is almost Siberia.</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h2>Flavours</h2>
+        <p></p>
+        <ol>
+          <li>Indentation based (.sass)</li>
+          <li>Nested braces (.scss)</li>
+        </ol>
+      </section>
+      <section>
+        <h2>Code Examples</h2>
+        <pre><code class="profile">//COBUCLG  JOB CLASS=A,MSGCLASS=A,MSGLEVEL=(1,1)
 //HELOWRLD EXEC COBUCLG,PARM.COB='MAP,LIST,LET'
 //COB.SYSIN DD *
   001  IDENTIFICATION DIVISION.
@@ -74,15 +71,15 @@
 //GO.SYSPRINT DD SYSOUT=A
 //
 </code></pre>
-		<aside class="notes">
-			<ul>
-				<li>Lets start digging into the code ...</li>
-			</ul>
-		</aside>
-	</section>
-	<section>
-		<h2>Real Code Examples</h2>
-		<pre><code class="scss">// Variables
+        <aside class="notes">
+          <ul>
+            <li>Lets start digging into the code ...</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h2>Real Code Examples</h2>
+        <pre><code class="scss">// Variables
 $dont-even: blink;
 
 .awesome {
@@ -105,53 +102,53 @@ $dont-even: blink;
 	// is also valid SCSS
 }
 		</code></pre>
-		<ol>
-			<li><a href="http://sassmeister.com/gist/366d46064bfae8353588">Open on Sassmeister</a></li>
-			<li><a href="http://codepen.io/nschonni/pen/isnbt?editors=110">Open on CodePen</a></li>
-		</ol>
-		<aside class="notes">>
-			<ul>
-				<li>Lets start digging into the code ...</li>
-			</ul>
-		</aside>
-	</section>
-</section>
-				<section>
-	<section>
-		<h2 id="tools">How do I compile this stuff?</h2>
-		<ol>
-			<li>Sass - The original Ruby Gem. http://github.com/sass/sass</li>
-			<li>Compass - The Compass Gem: http://compass-style.org/</li>
-			<li>LibSass - A C library http://github.com/sass/libsass</li>
-			<li>Node-Sass: A NodeJS native bindinf for libSass http://github.com/sass/node-sass</li>
-		</ol>
-		<aside class="notes">
-			<ul>
-				<li>Ask for language preferences</li>
-			</ul>
-		</aside>
-	</section>
-	<section>
-		<h2>Warning</h2>
-		<img src="./assets/DangerWillRobinson.jpg" alt="Robot from the show Lost in Space, saying 'Danger Will Robinson'">
-		<p>Not all compilers support the features of the Ruby version :(</p>
-	</section>
-</section>
-				<section>
-	<section>
-		<h2>$Variables</h2>
-		<ol>
-			<li>Start with a <code>$</code></li>
-			<li>Makes it easier for theming and branding</li>
-		</ol>
-	</section>
-	<section>
-		<h2>Scope</h2>
-		<p>Variables are scoped to the block that calls them</p>
-	</section>
-	<section>
-		<h2>What should this be compiled to?</h2>
-		<pre><code class="scss">
+        <ol>
+          <li><a href="http://sassmeister.com/gist/366d46064bfae8353588">Open on Sassmeister</a></li>
+          <li><a href="http://codepen.io/nschonni/pen/isnbt?editors=110">Open on CodePen</a></li>
+        </ol>
+        <aside class="notes">>
+          <ul>
+            <li>Lets start digging into the code ...</li>
+          </ul>
+        </aside>
+      </section>
+    </section>
+    <section>
+      <section>
+        <h2 id="tools">How do I compile this stuff?</h2>
+        <ol>
+          <li>Sass - The original Ruby Gem. http://github.com/sass/sass</li>
+          <li>Compass - The Compass Gem: http://compass-style.org/</li>
+          <li>LibSass - A C library http://github.com/sass/libsass</li>
+          <li>Node-Sass: A NodeJS native bindinf for libSass http://github.com/sass/node-sass</li>
+        </ol>
+        <aside class="notes">
+          <ul>
+            <li>Ask for language preferences</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h2>Warning</h2>
+        <img src="./assets/DangerWillRobinson.jpg" alt="Robot from the show Lost in Space, saying 'Danger Will Robinson'">
+        <p>Not all compilers support the features of the Ruby version :(</p>
+      </section>
+    </section>
+    <section>
+      <section>
+        <h2>$Variables</h2>
+        <ol>
+          <li>Start with a <code>$</code></li>
+          <li>Makes it easier for theming and branding</li>
+        </ol>
+      </section>
+      <section>
+        <h2>Scope</h2>
+        <p>Variables are scoped to the block that calls them</p>
+      </section>
+      <section>
+        <h2>What should this be compiled to?</h2>
+        <pre><code class="scss">
 $color: white;
 
 @mixin colors($color: blue) {
@@ -166,115 +163,115 @@ $color: white;
   }
 }
 		</code></pre>
-	</section>
-	<section>
-		<h2>Did you get it right?</h2>
-		<pre><code class="css">
+      </section>
+      <section>
+        <h2>Did you get it right?</h2>
+        <pre><code class="css">
 .colors {
   background-color: blue;
   color: white;
   border-color: blue;
 }
 		</code></pre>
-	</section>
-	<section>
-		<h2>Naming</h2>
-		<p>Make it easy to figure out which variable a new user should pick</p>
-		<p>See http://thesassway.com/beginner/variable-naming for a good explaination</p>
-	</section>
-	<section>
-		<h2>Interpolation</h2>
-		<p>Lets mix up some strings!</p>
-		<pre><code class="scss">
+      </section>
+      <section>
+        <h2>Naming</h2>
+        <p>Make it easy to figure out which variable a new user should pick</p>
+        <p>See http://thesassway.com/beginner/variable-naming for a good explaination</p>
+      </section>
+      <section>
+        <h2>Interpolation</h2>
+        <p>Lets mix up some strings!</p>
+        <pre><code class="scss">
 $name: foo;
 $attr: border;
 p.#{$name} {
   #{$attr}-color: blue;
 }
 		</code></pre>
-		<p>Where would this be usefull?</p>
-	</section>
-</section>
-				<section>
-	<section>
-		<h2>_Partials</h2>
-		<p>Partials let you build a sheet that doesn't compile to a CSS file</p>
-	</section>
-	<section>
-		<h2>Why would you use partials</h2>
-		<ul>
-			<li>Global variables</li>
-			<li>Functions and Mixins utility sheets</li>
-			<li>@media query specific sheets</li>
-		</ul>
-	</section>
-	<section>
-		<h2>How to make a partial</h2>
-		<ol>
-			<li>Rename your file to add "_" at the front</li>
-			<li>Profit$$$</li>
-		</ol>
-	</section>
-</section>
-				<section>
-	<section>
-		<h2>@imports</h2>
-		<p>OK, so I have 20 sheets, how do I stitch them together</p>
-	</section>
-	<section>
-		<h2>When to import?</h2>
-		<ul>
-			<li>Your common variables</li>
-			<li>Mixins</li>
-			<li>Your media queries</li>
-		</ul>
-	</section>
-	<section>
-		<h2>Demo</h2>
-		<h3>_branding.scss</h3>
-		<pre><code class="scss">
+        <p>Where would this be usefull?</p>
+      </section>
+    </section>
+    <section>
+      <section>
+        <h2>_Partials</h2>
+        <p>Partials let you build a sheet that doesn't compile to a CSS file</p>
+      </section>
+      <section>
+        <h2>Why would you use partials</h2>
+        <ul>
+          <li>Global variables</li>
+          <li>Functions and Mixins utility sheets</li>
+          <li>@media query specific sheets</li>
+        </ul>
+      </section>
+      <section>
+        <h2>How to make a partial</h2>
+        <ol>
+          <li>Rename your file to add "_" at the front</li>
+          <li>Profit$$$</li>
+        </ol>
+      </section>
+    </section>
+    <section>
+      <section>
+        <h2>@imports</h2>
+        <p>OK, so I have 20 sheets, how do I stitch them together</p>
+      </section>
+      <section>
+        <h2>When to import?</h2>
+        <ul>
+          <li>Your common variables</li>
+          <li>Mixins</li>
+          <li>Your media queries</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Demo</h2>
+        <h3>_branding.scss</h3>
+        <pre><code class="scss">
 $border-colour: red;
 $border-width: 1px;
 		</code></pre>
-		<h3>base.scss</h3>
-		<pre><code class="scss">
+        <h3>base.scss</h3>
+        <pre><code class="scss">
 @import "branding";
 
 .uses-partial {
 	color: $border-colour;
 }
 		</code></pre>
-	</section>
-	<section>
-		<h2>But I really like the CSS version of @import</h2>
-		<ul>
-			<li>OK ...</li>
-			<li>Are you sure?</li>
-		</ul>
-	</section>
-	<section>
-		<h2>Keeping your classic @import</h2>
-		<pre><code class="scss">
+      </section>
+      <section>
+        <h2>But I really like the CSS version of @import</h2>
+        <ul>
+          <li>OK ...</li>
+          <li>Are you sure?</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Keeping your classic @import</h2>
+        <pre><code class="scss">
 @import "foo.css";
 @import "foo" screen;
 @import "http://foo.com/bar";
 @import url(foo);
 		</code></pre>
-	</section>
-	<section>
-		<h2>OK, a valid use case for the old way</h2>
-		<pre><code class="scss">
+      </section>
+      <section>
+        <h2>OK, a valid use case for the old way</h2>
+        <pre><code class="scss">
 $theme: unquote("awesome");
 
 @import url("http://cdn.example.com/css/#{$theme}.css");
 		</code></pre>
-	</section>
-</section>
-				<section>
-	<section>
-		<h2>@extend yourself</h2>
-    <p>Used when you want extend</p>
-		<pre><code class="scss">
+      </section>
+    </section>
+    <section>
+      <section>
+        <h2>@extend yourself</h2>
+        <p>Used when you want extend</p>
+        <pre><code class="scss">
 .message {
   border: 1px solid #ccc;
   padding: 10px;
@@ -296,22 +293,22 @@ $theme: unquote("awesome");
   border-color: yellow;
 }
 		</code></pre>
-	</section>
-  <section>
-    <h2>%placholder</h2>
-    <p>Used when you want extend, but safer</p>
-    <pre><code class="scss">
+      </section>
+      <section>
+        <h2>%placholder</h2>
+        <p>Used when you want extend, but safer</p>
+        <pre><code class="scss">
 // If nothing extends me, I don't output anything
 
 %width-small {
     width: 10px;
 }
     </code></pre>
-  </section>
-  <section>
-    <h2>Demo</h2>
-    <p>Used when you want extend, but safer</p>
-    <pre><code class="scss">
+      </section>
+      <section>
+        <h2>Demo</h2>
+        <p>Used when you want extend, but safer</p>
+        <pre><code class="scss">
 // If nothing extends me, I don't output anything
 
 %width-small {
@@ -329,15 +326,13 @@ $theme: unquote("awesome");
   background: #ccc;
 }
     </code></pre>
-  </section>
-</section>
-
-				
-				<section>
-	<section>
-		<h2>@mixins</h2>
-		<p>Hey, we're all related right</p>
-		<pre><code class="scss">
+      </section>
+    </section>
+    <section>
+      <section>
+        <h2>@mixins</h2>
+        <p>Hey, we're all related right</p>
+        <pre><code class="scss">
 @mixin the-border {
   border: 1px solid #ccc;
 }
@@ -352,11 +347,11 @@ $theme: unquote("awesome");
   direction: $direction;
 }
 		</code></pre>
-	</section>
-	<section>
-		<h2>@functions</h2>
-		<p>Calculate all the thinks</p>
-		<pre><code class="scss">
+      </section>
+      <section>
+        <h2>@functions</h2>
+        <p>Calculate all the thinks</p>
+        <pre><code class="scss">
 $grid-width: 40px;
 $gutter-width: 10px;
 
@@ -368,58 +363,55 @@ $gutter-width: 10px;
   width: grid-width(5);
 }
 		</code></pre>
-	</section>
-</section>
-
-				<section>
-	<section>
-		<h2>SCSS Lint</h2>
-		<p><a href="https://github.com/causes/scss-lint">https://github.com/causes/scss-lint</a></p>
-		<p>This allows you to create coding guidelines for your team, and warns you when you might be making mistakes</p>
-	</section>
-</section>
-				<section>
-	<h2>Links, Links, Links</h2>
-	<ul>
-		<li>Blogs/Sites (mostly from http://sass-lang.com/community)
-			<ul>
-				<li><a href="http://sass-lang.com/">sass-lang.com</a></li>
-				<li><a href="//thesassway.com/">The Sass Way</a></li>
-				<li><a href="//css-tricks.com/search-results/?q=sass">CSS-Tricks</a></li>
-				<li><a href="//benfrain.com/tag/sass/">Ben Frain</a></li>
-				<li><a href="//zurb.com/blog/sass">Zurb</a></li>
-				<li><a href="//net.tutsplus.com/?s=sass">NetTuts</a></li>
-				<li><a href="//viget.com/inspire/search/YTo2OntzOjg6ImtleXdvcmRzIjtzOjQ6InNhc3MiO3M6MTE6InNlYXJjaF9tb2RlIjtzOjM6ImFsbCI7czoxMToicmVzdWx0X3BhZ2UiO3M6MTQ6Imluc3BpcmUvc2VhcmNoIjtzOjEwOiJjb2xsZWN0aW9uIjthOjE6e2k6MDtzOjE6IjEiO31zOjEwOiJsb29zZV9lbmRzIjtiOjE7czo4OiJjYXRlZ29yeSI7czozOiIxMjUiO30">Viget Inspire</a></li>
-				<li><a href="//www.google.com/cse?cx=partner-pub-1988806651014029%3A4kuybaak597&amp;ie=ISO-8859-1&amp;q=sass#gsc.tab=0&amp;gsc.q=sass&amp;gsc.page=1">Unmatched Style</a></li>
-			</ul>
-		</li>
-		<li>Weekly mailers
-			<ul>
-				<li><a href="http://SassNews.com">SassNews.com</a>: a MailChimp powered weekly newsletter</li>
-			</ul>
-		</li>
-		<li>Others you'd like to share?</li>
-	</ul>
-	<aside class="notes">
-		<ul>
-			<li></li>
-		</ul>
-	</aside>
-</section>
-				<section>
-	<h2>Contact Me</h2>
-	<ul>
-		<li>Twitter: @nchonni</li>
-		<li>Email: nschonni@gmail.com</li>
-	</ul>
-</section>
-			</div>
-		</div>
-
-		<script src="./reveal.js/lib/js/head.min.js"></script>
-		<script src="./reveal.js/js/reveal.min.js"></script>
-		
-		<script>
+      </section>
+    </section>
+    <section>
+      <section>
+        <h2>SCSS Lint</h2>
+        <p><a href="https://github.com/causes/scss-lint">https://github.com/causes/scss-lint</a></p>
+        <p>This allows you to create coding guidelines for your team, and warns you when you might be making mistakes</p>
+      </section>
+    </section>
+    <section>
+      <h2>Links, Links, Links</h2>
+      <ul>
+        <li>Blogs/Sites (mostly from http://sass-lang.com/community)
+          <ul>
+            <li><a href="http://sass-lang.com/">sass-lang.com</a></li>
+            <li><a href="//thesassway.com/">The Sass Way</a></li>
+            <li><a href="//css-tricks.com/search-results/?q=sass">CSS-Tricks</a></li>
+            <li><a href="//benfrain.com/tag/sass/">Ben Frain</a></li>
+            <li><a href="//zurb.com/blog/sass">Zurb</a></li>
+            <li><a href="//net.tutsplus.com/?s=sass">NetTuts</a></li>
+            <li><a href="//viget.com/inspire/search/YTo2OntzOjg6ImtleXdvcmRzIjtzOjQ6InNhc3MiO3M6MTE6InNlYXJjaF9tb2RlIjtzOjM6ImFsbCI7czoxMToicmVzdWx0X3BhZ2UiO3M6MTQ6Imluc3BpcmUvc2VhcmNoIjtzOjEwOiJjb2xsZWN0aW9uIjthOjE6e2k6MDtzOjE6IjEiO31zOjEwOiJsb29zZV9lbmRzIjtiOjE7czo4OiJjYXRlZ29yeSI7czozOiIxMjUiO30">Viget Inspire</a></li>
+            <li><a href="//www.google.com/cse?cx=partner-pub-1988806651014029%3A4kuybaak597&amp;ie=ISO-8859-1&amp;q=sass#gsc.tab=0&amp;gsc.q=sass&amp;gsc.page=1">Unmatched Style</a></li>
+          </ul>
+        </li>
+        <li>Weekly mailers
+          <ul>
+            <li><a href="http://SassNews.com">SassNews.com</a>: a MailChimp powered weekly newsletter</li>
+          </ul>
+        </li>
+        <li>Others you'd like to share?</li>
+      </ul>
+      <aside class="notes">
+        <ul>
+          <li></li>
+        </ul>
+      </aside>
+    </section>
+    <section>
+      <h2>Contact Me</h2>
+      <ul>
+        <li>Twitter: @nchonni</li>
+        <li>Email: nschonni@gmail.com</li>
+      </ul>
+    </section>
+  </div>
+</div>
+<script src="./reveal.js/lib/js/head.min.js"></script> 
+<script src="./reveal.js/js/reveal.min.js"></script> 
+<script>
 			Reveal.initialize({
 				controls: true,
 				progress: true,
@@ -439,5 +431,5 @@ $gutter-width: 10px;
 				]
 			});
 		</script>
-	</body>
+</body>
 </html>
