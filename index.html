@@ -1,435 +1,395 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Introduction to Sass</title>
-<link rel="stylesheet" href="./reveal.js/css/reveal.min.css">
-<link rel="stylesheet" href="css/styles.min.css">
 
-<!-- For Highlighting -->
-<link rel="stylesheet" href="./reveal.js/lib/css/zenburn.css">
-</head>
-<body>
-<h1>Template for presentations</h1>
-<div class="reveal">
-  <div class="slides">
-    <section>
-      <section>
-        <h2 id="intro">this is a demo</h2>
-        <img src="./assets/Sass.png" title="Sass logo" />
-        <p>#Sass, #WxT</p>
-        <p>
-          <time datetime="2014-08-14">August 14, 2014</time>
-        </p>
-        <aside class="notes">
-          <ul>
-            <li>Nick Schonning. Work at CIC as Programmer</li>
-            <li>From the Federal worker in Toronto, which is almost Siberia.</li>
-          </ul>
-        </aside>
-      </section>
-      <section>
-        <h2 id="toufic">this is a demo page by toufic</h2>
-        <p>a11y</p>
-        <aside class="notes">
-          <ul>
-            <li>Nick Schonning. Work at CIC as Programmer</li>
-            <li>From the Federal worker in Toronto, which is almost Siberia.</li>
-          </ul>
-        </aside>
-      </section>
-      <section>
-        <h2>Flavours</h2>
-        <p></p>
-        <ol>
-          <li>Indentation based (.sass)</li>
-          <li>Nested braces (.scss)</li>
-        </ol>
-      </section>
-      <section>
-        <h2>Code Examples</h2>
-        <pre><code class="profile">//COBUCLG  JOB CLASS=A,MSGCLASS=A,MSGLEVEL=(1,1)
-//HELOWRLD EXEC COBUCLG,PARM.COB='MAP,LIST,LET'
-//COB.SYSIN DD *
-  001  IDENTIFICATION DIVISION.
-  002  PROGRAM-ID.  'HELLO'.
-  003  ENVIRONMENT DIVISION.
-  004  CONFIGURATION SECTION.
-  005  SOURCE-COMPUTER.  IBM-360.
-  006  OBJECT-COMPUTER.  IBM-360.
-  0065 SPECIAL-NAMES.
-  0066     CONSOLE IS CNSL.
-  007  DATA DIVISION.
-  008  WORKING-STORAGE SECTION.
-  009  77  HELLO-CONST   PIC X(12) VALUE 'HELLO, WORLD'.
-  075  PROCEDURE DIVISION.
-  090  000-DISPLAY.
-  100      DISPLAY HELLO-CONST UPON CNSL.
-  110      STOP RUN.
-//LKED.SYSLIB DD DSNAME=SYS1.COBLIB,DISP=SHR
-//            DD DSNAME=SYS1.LINKLIB,DISP=SHR
-//GO.SYSPRINT DD SYSOUT=A
-//
-</code></pre>
-        <aside class="notes">
-          <ul>
-            <li>Lets start digging into the code ...</li>
-          </ul>
-        </aside>
-      </section>
-      <section>
-        <h2>Real Code Examples</h2>
-        <pre><code class="scss">// Variables
-$dont-even: blink;
+	<head>
+		<meta charset="utf-8">
 
-.awesome {
-    text-decoration: $dont-even;
-    
-    $me-pink: #d69;
-    color: $me-pink;
-}
+		<title>reveal.js - The HTML Presentation Framework</title>
 
-.sass {
-    .is {
-        .so {
-            // Inheritance over duplication
-            @extend .awesome;
-        }
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>10 quick tests</h1>
+                    <h2>to check your web page for accessibility</h2>
+					<h3>a11yQc 2014</h3>
+					<p>
+						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Heads Up</h2>
+					<p>
+						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
+						support for CSS 3D transforms to see it in its full glory.
+					</p>
+
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>Vertical Slides</h2>
+						<p>
+							Slides can be nested inside of other slides,
+							try pressing <a href="#" class="navigate-down">down</a>.
+						</p>
+						<a href="#" class="image navigate-down">
+							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					<section>
+						<h2>Basement Level 1</h2>
+						<p>Press down or up to navigate.</p>
+					</section>
+					<section>
+						<h2>Basement Level 2</h2>
+						<p>Cornify</p>
+						<a class="test" href="http://cornify.com">
+							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
+						</a>
+					</section>
+					<section>
+						<h2>Basement Level 3</h2>
+						<p>That's it, time to go back up.</p>
+						<a href="#/2" class="image">
+							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
+						</a>
+					</section>
+				</section>
+
+				<section>
+					<h2>Slides</h2>
+					<p>
+						Not a coder? No problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slid.es" target="_blank">http://slid.es</a>.
+					</p>
+				</section>
+
+				<section>
+					<h2>Point of View</h2>
+					<p>
+						Press <strong>ESC</strong> to enter the slide overview.
+					</p>
+					<p>
+						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
+					</p>
+				</section>
+
+				<section>
+					<h2>Works in Mobile Safari</h2>
+					<p>
+						Try it out! You can swipe through the slides and pinch your way to the overview.
+					</p>
+				</section>
+
+				<section>
+					<h2>Marvelous Unordered List</h2>
+					<ul>
+						<li>No order here</li>
+						<li>Or here</li>
+						<li>Or here</li>
+						<li>Or here</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Fantastic Ordered List</h2>
+					<ol>
+						<li>One is smaller than...</li>
+						<li>Two is smaller than...</li>
+						<li>Three!</li>
+					</ol>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						## Markdown support
+
+						For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
+
+						```
+						<section data-markdown>
+						  ## Markdown support
+
+						  For those of you who like that sort of thing.
+						  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
+						</section>
+						```
+					</script>
+				</section>
+
+				<section id="transitions">
+					<h2>Transition Styles</h2>
+					<p>
+						You can select from different transitions, like: <br>
+						<a href="?transition=cube#/transitions">Cube</a> -
+						<a href="?transition=page#/transitions">Page</a> -
+						<a href="?transition=concave#/transitions">Concave</a> -
+						<a href="?transition=zoom#/transitions">Zoom</a> -
+						<a href="?transition=linear#/transitions">Linear</a> -
+						<a href="?transition=fade#/transitions">Fade</a> -
+						<a href="?transition=none#/transitions">None</a> -
+						<a href="?#/transitions">Default</a>
+					</p>
+				</section>
+
+				<section id="themes">
+					<h2>Themes</h2>
+					<p>
+						Reveal.js comes with a few themes built in: <br>
+						<a href="?#/themes">Default</a> -
+						<a href="?theme=sky#/themes">Sky</a> -
+						<a href="?theme=beige#/themes">Beige</a> -
+						<a href="?theme=simple#/themes">Simple</a> -
+						<a href="?theme=serif#/themes">Serif</a> -
+						<a href="?theme=night#/themes">Night</a> <br>
+						<a href="?theme=moon#/themes">Moon</a> -
+						<a href="?theme=solarized#/themes">Solarized</a>
+					</p>
+					<p>
+						<small>
+							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
+						</small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Global State</h2>
+					<p>
+						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
+						will be added as a class to the document element when the slide is open. This lets you
+						apply broader style changes, like switching the background.
+					</p>
+				</section>
+
+				<section data-state="customevent">
+					<h2>Custom Events</h2>
+					<p>
+						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
+					</p>
+					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+Reveal.addEventListener( 'customevent', function() {
+	console.log( '"customevent" has fired' );
+} );
+					</code></pre>
+				</section>
+
+				<section>
+					<section data-background="#007777">
+						<h2>Slide Backgrounds</h2>
+						<p>
+							Set <code>data-background="#007777"</code> on a slide to change the full page background to the given color. All CSS color formats are supported.
+						</p>
+						<a href="#" class="image navigate-down">
+							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
+						<h2>Image Backgrounds</h2>
+						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
+					</section>
+					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" data-background-repeat="repeat" data-background-size="100px">
+						<h2>Repeated Image Backgrounds</h2>
+						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
+					</section>
+				</section>
+
+				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+					<h2>Background Transitions</h2>
+					<p>
+						Pass reveal.js the <code>backgroundTransition: 'slide'</code> config argument to make backgrounds slide rather than fade.
+					</p>
+				</section>
+
+				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+					<h2>Background Transition Override</h2>
+					<p>
+						You can override background transitions per slide by using <code>data-background-transition="slide"</code>.
+					</p>
+				</section>
+
+				<section>
+					<h2>Clever Quotes</h2>
+					<p>
+						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
+					</p>
+					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
+						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
+					</blockquote>
+				</section>
+
+				<section>
+					<h2>Pretty Code</h2>
+					<pre><code data-trim contenteditable>
+function linkify( selector ) {
+  if( supports3DTransforms ) {
+
+    var nodes = document.querySelectorAll( selector );
+
+    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+      var node = nodes[i];
+
+      if( !node.className ) {
+        node.className += ' roll';
+      }
     }
-}
-
-.and .valid .css {
-	// is also valid SCSS
-}
-		</code></pre>
-        <ol>
-          <li><a href="http://sassmeister.com/gist/366d46064bfae8353588">Open on Sassmeister</a></li>
-          <li><a href="http://codepen.io/nschonni/pen/isnbt?editors=110">Open on CodePen</a></li>
-        </ol>
-        <aside class="notes">>
-          <ul>
-            <li>Lets start digging into the code ...</li>
-          </ul>
-        </aside>
-      </section>
-    </section>
-    <section>
-      <section>
-        <h2 id="tools">How do I compile this stuff?</h2>
-        <ol>
-          <li>Sass - The original Ruby Gem. http://github.com/sass/sass</li>
-          <li>Compass - The Compass Gem: http://compass-style.org/</li>
-          <li>LibSass - A C library http://github.com/sass/libsass</li>
-          <li>Node-Sass: A NodeJS native bindinf for libSass http://github.com/sass/node-sass</li>
-        </ol>
-        <aside class="notes">
-          <ul>
-            <li>Ask for language preferences</li>
-          </ul>
-        </aside>
-      </section>
-      <section>
-        <h2>Warning</h2>
-        <img src="./assets/DangerWillRobinson.jpg" alt="Robot from the show Lost in Space, saying 'Danger Will Robinson'">
-        <p>Not all compilers support the features of the Ruby version :(</p>
-      </section>
-    </section>
-    <section>
-      <section>
-        <h2>$Variables</h2>
-        <ol>
-          <li>Start with a <code>$</code></li>
-          <li>Makes it easier for theming and branding</li>
-        </ol>
-      </section>
-      <section>
-        <h2>Scope</h2>
-        <p>Variables are scoped to the block that calls them</p>
-      </section>
-      <section>
-        <h2>What should this be compiled to?</h2>
-        <pre><code class="scss">
-$color: white;
-
-@mixin colors($color: blue) {
-  background-color: $color;
-  @content;
-  border-color: $color;
-}
-
-.colors {
-  @include colors {
-    color: $color;
   }
 }
-		</code></pre>
-      </section>
-      <section>
-        <h2>Did you get it right?</h2>
-        <pre><code class="css">
-.colors {
-  background-color: blue;
-  color: white;
-  border-color: blue;
-}
-		</code></pre>
-      </section>
-      <section>
-        <h2>Naming</h2>
-        <p>Make it easy to figure out which variable a new user should pick</p>
-        <p>See http://thesassway.com/beginner/variable-naming for a good explaination</p>
-      </section>
-      <section>
-        <h2>Interpolation</h2>
-        <p>Lets mix up some strings!</p>
-        <pre><code class="scss">
-$name: foo;
-$attr: border;
-p.#{$name} {
-  #{$attr}-color: blue;
-}
-		</code></pre>
-        <p>Where would this be usefull?</p>
-      </section>
-    </section>
-    <section>
-      <section>
-        <h2>_Partials</h2>
-        <p>Partials let you build a sheet that doesn't compile to a CSS file</p>
-      </section>
-      <section>
-        <h2>Why would you use partials</h2>
-        <ul>
-          <li>Global variables</li>
-          <li>Functions and Mixins utility sheets</li>
-          <li>@media query specific sheets</li>
-        </ul>
-      </section>
-      <section>
-        <h2>How to make a partial</h2>
-        <ol>
-          <li>Rename your file to add "_" at the front</li>
-          <li>Profit$$$</li>
-        </ol>
-      </section>
-    </section>
-    <section>
-      <section>
-        <h2>@imports</h2>
-        <p>OK, so I have 20 sheets, how do I stitch them together</p>
-      </section>
-      <section>
-        <h2>When to import?</h2>
-        <ul>
-          <li>Your common variables</li>
-          <li>Mixins</li>
-          <li>Your media queries</li>
-        </ul>
-      </section>
-      <section>
-        <h2>Demo</h2>
-        <h3>_branding.scss</h3>
-        <pre><code class="scss">
-$border-colour: red;
-$border-width: 1px;
-		</code></pre>
-        <h3>base.scss</h3>
-        <pre><code class="scss">
-@import "branding";
+					</code></pre>
+					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+				</section>
 
-.uses-partial {
-	color: $border-colour;
-}
-		</code></pre>
-      </section>
-      <section>
-        <h2>But I really like the CSS version of @import</h2>
-        <ul>
-          <li>OK ...</li>
-          <li>Are you sure?</li>
-        </ul>
-      </section>
-      <section>
-        <h2>Keeping your classic @import</h2>
-        <pre><code class="scss">
-@import "foo.css";
-@import "foo" screen;
-@import "http://foo.com/bar";
-@import url(foo);
-		</code></pre>
-      </section>
-      <section>
-        <h2>OK, a valid use case for the old way</h2>
-        <pre><code class="scss">
-$theme: unquote("awesome");
+				<section>
+					<h2>Intergalactic Interconnections</h2>
+					<p>
+						You can link between slides internally,
+						<a href="#/2/3">like this</a>.
+					</p>
+				</section>
 
-@import url("http://cdn.example.com/css/#{$theme}.css");
-		</code></pre>
-      </section>
-    </section>
-    <section>
-      <section>
-        <h2>@extend yourself</h2>
-        <p>Used when you want extend</p>
-        <pre><code class="scss">
-.message {
-  border: 1px solid #ccc;
-  padding: 10px;
-  color: #333;
-}
+				<section>
+					<section id="fragments">
+						<h2>Fragmented Views</h2>
+						<p>Hit the next arrow...</p>
+						<p class="fragment">... to step through ...</p>
+						<ol>
+							<li class="fragment"><code>any type</code></li>
+							<li class="fragment"><em>of view</em></li>
+							<li class="fragment"><strong>fragments</strong></li>
+						</ol>
 
-.success {
-  @extend .message;
-  border-color: green;
-}
+						<aside class="notes">
+							This slide has fragments which are also stepped through in the notes window.
+						</aside>
+					</section>
+					<section>
+						<h2>Fragment Styles</h2>
+						<p>There's a few styles of fragments, like:</p>
+						<p class="fragment grow">grow</p>
+						<p class="fragment shrink">shrink</p>
+						<p class="fragment roll-in">roll-in</p>
+						<p class="fragment fade-out">fade-out</p>
+						<p class="fragment highlight-red">highlight-red</p>
+						<p class="fragment highlight-green">highlight-green</p>
+						<p class="fragment highlight-blue">highlight-blue</p>
+						<p class="fragment current-visible">current-visible</p>
+						<p class="fragment highlight-current-blue">highlight-current-blue</p>
+					</section>
+				</section>
 
-.error {
-  @extend .message;
-  border-color: red;
-}
+				<section>
+					<h2>Spectacular image!</h2>
+					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
+						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
+					</a>
+				</section>
 
-.warning {
-  @extend .message;
-  border-color: yellow;
-}
-		</code></pre>
-      </section>
-      <section>
-        <h2>%placholder</h2>
-        <p>Used when you want extend, but safer</p>
-        <pre><code class="scss">
-// If nothing extends me, I don't output anything
+				<section>
+					<h2>Export to PDF</h2>
+					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
+					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
+					<script>
+						document.getElementById('slideshare').attributeName = 'allowfullscreen';
+					</script>
+				</section>
 
-%width-small {
-    width: 10px;
-}
-    </code></pre>
-      </section>
-      <section>
-        <h2>Demo</h2>
-        <p>Used when you want extend, but safer</p>
-        <pre><code class="scss">
-// If nothing extends me, I don't output anything
+				<section>
+					<h2>Take a Moment</h2>
+					<p>
+						Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
+						during a presentation.
+					</p>
+				</section>
 
-%width-small {
-  width: 10px;
-}
+				<section>
+					<h2>Stellar Links</h2>
+					<ul>
+						<li><a href="http://slid.es">Try the online editor</a></li>
+						<li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
+						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
+					</ul>
+				</section>
 
-.foo {
-  // I want to grow up to be small
-  @extend %width-small;
-}
+				<section>
+					<h1>THE END</h1>
+					<h3>BY Hakim El Hattab / hakim.se</h3>
+				</section>
 
-// OK, now what is output
-.bar {
-  @extend %width-small;
-  background: #ccc;
-}
-    </code></pre>
-      </section>
-    </section>
-    <section>
-      <section>
-        <h2>@mixins</h2>
-        <p>Hey, we're all related right</p>
-        <pre><code class="scss">
-@mixin the-border {
-  border: 1px solid #ccc;
-}
+			</div>
 
-@mixin good-border {
-  @content;
-  border-color: green;
-}
+		</div>
 
-// What happens when I don't pass a value
-@mixin reading-direction($direction: "rtl") {
-  direction: $direction;
-}
-		</code></pre>
-      </section>
-      <section>
-        <h2>@functions</h2>
-        <p>Calculate all the thinks</p>
-        <pre><code class="scss">
-$grid-width: 40px;
-$gutter-width: 10px;
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
 
-@function grid-width($n) {
-  @return $n * $grid-width + ($n - 1) * $gutter-width;
-}
+		<script>
 
-#sidebar {
-  width: grid-width(5);
-}
-		</code></pre>
-      </section>
-    </section>
-    <section>
-      <section>
-        <h2>SCSS Lint</h2>
-        <p><a href="https://github.com/causes/scss-lint">https://github.com/causes/scss-lint</a></p>
-        <p>This allows you to create coding guidelines for your team, and warns you when you might be making mistakes</p>
-      </section>
-    </section>
-    <section>
-      <h2>Links, Links, Links</h2>
-      <ul>
-        <li>Blogs/Sites (mostly from http://sass-lang.com/community)
-          <ul>
-            <li><a href="http://sass-lang.com/">sass-lang.com</a></li>
-            <li><a href="//thesassway.com/">The Sass Way</a></li>
-            <li><a href="//css-tricks.com/search-results/?q=sass">CSS-Tricks</a></li>
-            <li><a href="//benfrain.com/tag/sass/">Ben Frain</a></li>
-            <li><a href="//zurb.com/blog/sass">Zurb</a></li>
-            <li><a href="//net.tutsplus.com/?s=sass">NetTuts</a></li>
-            <li><a href="//viget.com/inspire/search/YTo2OntzOjg6ImtleXdvcmRzIjtzOjQ6InNhc3MiO3M6MTE6InNlYXJjaF9tb2RlIjtzOjM6ImFsbCI7czoxMToicmVzdWx0X3BhZ2UiO3M6MTQ6Imluc3BpcmUvc2VhcmNoIjtzOjEwOiJjb2xsZWN0aW9uIjthOjE6e2k6MDtzOjE6IjEiO31zOjEwOiJsb29zZV9lbmRzIjtiOjE7czo4OiJjYXRlZ29yeSI7czozOiIxMjUiO30">Viget Inspire</a></li>
-            <li><a href="//www.google.com/cse?cx=partner-pub-1988806651014029%3A4kuybaak597&amp;ie=ISO-8859-1&amp;q=sass#gsc.tab=0&amp;gsc.q=sass&amp;gsc.page=1">Unmatched Style</a></li>
-          </ul>
-        </li>
-        <li>Weekly mailers
-          <ul>
-            <li><a href="http://SassNews.com">SassNews.com</a>: a MailChimp powered weekly newsletter</li>
-          </ul>
-        </li>
-        <li>Others you'd like to share?</li>
-      </ul>
-      <aside class="notes">
-        <ul>
-          <li></li>
-        </ul>
-      </aside>
-    </section>
-    <section>
-      <h2>Contact Me</h2>
-      <ul>
-        <li>Twitter: @nchonni</li>
-        <li>Email: nschonni@gmail.com</li>
-      </ul>
-    </section>
-  </div>
-</div>
-<script src="./reveal.js/lib/js/head.min.js"></script> 
-<script src="./reveal.js/js/reveal.min.js"></script> 
-<script>
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				controls: true,
 				progress: true,
 				history: true,
 				center: true,
 
-        		margin: 0.0,
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
-				// theme: 'simple',
-				transition:  'none',
-        		backgroundTransition: 'none',
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
-					{ src: './reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); }},
-					{ src: './reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
+
 		</script>
-</body>
+
+	</body>
 </html>
